@@ -8,11 +8,48 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/data"
-        android:layout_width="wrap_content"
+        android:id="@+id/heading"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/discover_fav_pokemon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ash_card_view"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="22sp"
+        android:maxLines="2"
+        android:fontFamily="sans-serif-medium"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ash_card_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/heading"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp">
+
+    <ImageView
+        android:id="@+id/ash_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/ash" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

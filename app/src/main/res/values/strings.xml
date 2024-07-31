@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PokemonApp</string>
+    <string name="discover_fav_pokemon">Discover Your Favorite Pokemon</string>
 </resources>
